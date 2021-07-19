@@ -52,7 +52,7 @@ dependencies {
     implementation("com.google.android.material:material:1.3.0")
     implementation("androidx.compose.ui:ui:${rootProject.extra["compose_version"]}")
     implementation("androidx.compose.material:material:${rootProject.extra["compose_version"]}")
-    implementation("androidx.compose.ui:ui-tooling:${rootProject.extra["compose_version"]}")
+    implementation("androidx.compose.ui:ui-tooling:1.0.0-beta07")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
     implementation("androidx.activity:activity-compose:1.3.0-alpha06")
     testImplementation("junit:junit:4.+")
@@ -64,4 +64,7 @@ dependencies {
     implementation("com.google.accompanist:accompanist-coil:$version")
     implementation("com.google.accompanist:accompanist-insets:$version")
     implementation("com.google.accompanist:accompanist-pager:$version")
+
+    //compose nav
+    implementation ("androidx.navigation:navigation-compose:2.4.0-alpha04")
 }
