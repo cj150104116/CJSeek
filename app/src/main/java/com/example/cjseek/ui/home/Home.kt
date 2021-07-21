@@ -18,6 +18,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.cjseek.R
 import com.example.cjseek.ui.category.CategoryContent
+import com.example.cjseek.ui.category.CategoryScreen
 import com.example.cjseek.ui.search.SearchAppBar
 
 
@@ -39,7 +40,7 @@ fun HomeContent(modifier: Modifier = Modifier) {
             }
         }
         composable("category") {
-            CategoryContent {
+            CategoryScreen {
                 navController.popBackStack()
             }
         }
@@ -58,6 +59,7 @@ fun SearchContent(modifier: Modifier = Modifier) {
 
 @Composable
 fun HomeScreen() {
+
 
     var expanded by remember { mutableStateOf(false) }
 
