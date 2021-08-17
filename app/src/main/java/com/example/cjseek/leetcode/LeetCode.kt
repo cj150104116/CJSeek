@@ -25,9 +25,16 @@ class Solution {
     返回值：{3,2,1}
      */
     fun reverseList(head: ListNode?): ListNode? {
-
-
-        return null
+        var pre: ListNode? = null
+        var p: ListNode? = null
+        var currentNode = head
+        while (currentNode != null) {
+            p = currentNode.next
+            currentNode.next = pre
+            pre = head
+            currentNode = p
+        }
+        return pre
     }
 }
 
