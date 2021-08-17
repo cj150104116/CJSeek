@@ -6,6 +6,7 @@ plugins {
 android {
     compileSdk = 30
 
+
     defaultConfig {
         applicationId = "com.example.cjseek"
         minSdk = 21
