@@ -10,11 +10,15 @@ package com.example.cjseek.leetcode
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 class Solution {
-    fun twoSum(nums: IntArray, target: Int): IntArray {
-        val indexs = IntArray(2)
-
-
-        return indexs
+    fun twoSum(nums: Array<Int>, target: Int): Array<Int> {
+        val map = mutableMapOf<Int, Int>()
+        for ((index, num) in nums.withIndex()) {
+            if (map.contains(target - nums[index])) {
+                return arrayOf(map[target - nums[index]]!!, index)
+            }
+            map[num] = index
+        }
+        return arrayOf(-1, -1)
     }
 
     /**
@@ -26,7 +30,7 @@ class Solution {
      */
     fun reverseList(head: ListNode?): ListNode? {
         var pre: ListNode? = null
-        var p: ListNode? = null
+        var p: ListNode?
         var currentNode = head
         while (currentNode != null) {
             p = currentNode.next

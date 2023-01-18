@@ -11,13 +11,16 @@ import org.junit.Test
 class SolutionTest {
     @Test
     fun twoSum_isCorrect() {
-        val node1 = ListNode(2)
-        val node2 = ListNode(3)
-        val node3 = ListNode(4)
+//        val node1 = ListNode(2)
+//        val node2 = ListNode(3)
+//        val node3 = ListNode(4)
+//
+//        node1.next = node2
+//        node2.next = node3
+//        val reverseList = Solution().reverseList(node1)
+//        print("${reverseList?.value}:${reverseList?.next?.value}:${reverseList?.next?.next?.value}")
+        val twoSum = Solution().twoSum(arrayOf(2, 3, 4, 6, 1, 1), 12)
+        println(twoSum.contentToString())
 
-        node1.next = node2
-        node2.next = node3
-        val reverseList = Solution().reverseList(node1)
-        print("${reverseList?.value}:${reverseList?.next?.value}:${reverseList?.next?.next?.value}")
     }
 }
