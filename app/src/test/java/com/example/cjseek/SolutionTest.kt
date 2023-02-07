@@ -19,7 +19,7 @@ class SolutionTest {
 //        node2.next = node3
 //        val reverseList = Solution().reverseList(node1)
 //        print("${reverseList?.value}:${reverseList?.next?.value}:${reverseList?.next?.next?.value}")
-        val twoSum = Solution().twoSum(arrayOf(2, 3, 4, 6, 1, 1), 12)
+        val twoSum = Solution().twoSum(arrayOf(2, 3, 4, 6, 1, 1), 5)
         println(twoSum.contentToString())
 
     }

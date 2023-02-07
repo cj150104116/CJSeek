@@ -6,25 +6,25 @@ fun quickSort(array: IntArray, leftIndex: Int, rightIndex: Int) {
         quickSort(array, leftIndex, pivotIndex - 1)
         quickSort(array, pivotIndex + 1, rightIndex)
     }
-    println(array.contentToString())
 }
 
 private fun partition(array: IntArray, leftIndex: Int, rightIndex: Int): Int {
-    
     var left = leftIndex
     var right = rightIndex
-    val pivotValue = array[left]
+    val leftValue = array[left]
+
     while (left < right) {
-        while (left < right && array[right] >= pivotValue) {
+        while (left < right && array[right] >= leftValue) {
             right--
         }
         array[left] = array[right]
 
-        while (left < right && array[left] <= pivotValue) {
+        while (left < right && array[left] <= leftValue) {
             left++
         }
         array[right] = array[left]
     }
-    array[left] = pivotValue
+    array[left] = leftValue
+    println(array.contentToString())
     return left
 }

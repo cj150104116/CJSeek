@@ -10,15 +10,16 @@ package com.example.cjseek.leetcode
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 class Solution {
-    fun twoSum(nums: Array<Int>, target: Int): Array<Int> {
+    fun twoSum(nums: Array<Int>, target: Int): IntArray {
         val map = mutableMapOf<Int, Int>()
         for ((index, num) in nums.withIndex()) {
-            if (map.contains(target - nums[index])) {
-                return arrayOf(map[target - nums[index]]!!, index)
+            val key = target - num
+            if (map.contains(key)) {
+                return intArrayOf(map[key]!!, index)
             }
             map[num] = index
         }
-        return arrayOf(-1, -1)
+        return intArrayOf(-1, -1)
     }
 
     /**
