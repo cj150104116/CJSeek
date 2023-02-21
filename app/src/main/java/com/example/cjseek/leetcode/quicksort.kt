@@ -1,5 +1,8 @@
 package com.example.cjseek.leetcode
 
+/**
+ * https://blog.csdn.net/zhuxian1277/article/details/112466047
+ */
 fun quickSort(array: IntArray, leftIndex: Int, rightIndex: Int) {
     if (leftIndex < rightIndex) {
         val pivotIndex = partition(array, leftIndex, rightIndex)
